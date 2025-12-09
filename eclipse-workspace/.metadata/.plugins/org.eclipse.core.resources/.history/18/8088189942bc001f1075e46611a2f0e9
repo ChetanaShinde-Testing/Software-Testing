@@ -1,0 +1,20 @@
+package introduction;
+
+public class CoreJavaBrushUp1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int myNum = 5;
+		String Website = "Rahul Shetty Academy";
+		char letter = 'r';
+		double dec = 5.99;
+		boolean myCard = true;
+		
+		System.out.println(myNum+ "is the nvalue stored in the myNum variable");
+		System.out.println(Website+ "is the nvalue stored in the Website variable");
+		
+	}
+
+}

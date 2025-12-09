@@ -1,0 +1,6 @@
+Feature: Login Page
+Scenario: Check login with invalid credentials
+Given User is on login page
+When User enter valid username and password
+And click on OK button
+Then Login unsuccessful and user do not redirect to home page

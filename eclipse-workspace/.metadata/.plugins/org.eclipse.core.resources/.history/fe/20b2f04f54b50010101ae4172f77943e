@@ -1,0 +1,23 @@
+package test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Register {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver dr= new ChromeDriver();
+		dr.get ("https://demo.automationtesting.in/Register.html");
+		dr.manage().window().maximize();
+		dr.findElement(By.xpath("//input[@ng-model='FirstName']")).sendKeys("Chetana");
+		dr.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Shinde");
+		dr.findElement(By.xpath("//textarea[@ng-model='Adress']")).sendKeys("Star shadow, pune");
+		dr.findElement(By.xpath("//input[@type='email']")).sendKeys("chetanashinde0292@gmail.com");
+		dr.findElement(By.xpath("//input[@ng-model='Phone']")).sendKeys("7776822414");
+		dr.findElement(By.xpath("//input[@value='FeMale']")).click();
+		
+	}
+
+}

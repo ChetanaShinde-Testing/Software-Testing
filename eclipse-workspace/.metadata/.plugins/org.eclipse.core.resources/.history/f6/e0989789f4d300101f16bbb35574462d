@@ -1,0 +1,46 @@
+package test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Actiondemoclass {
+
+	public static void main(String[] args) throws Exception {
+
+		
+	WebDriver dr= new ChromeDriver();
+	dr.get("https://www.saucedemo.com/");
+	dr.manage().window().maximize();
+	
+	WebElement we1 = dr.findElement(By.id("user-name"));
+	
+	Actions a = new Actions(dr);
+	a.moveToElement(we1).build().perform();
+	we1.click();
+	Thread.sleep(5000);
+	we1.sendKeys("Chetana");
+	
+	WebElement we2 = dr.findElement(By.id("password"));
+	Actions b= new Actions(dr);
+	b.moveToElement(we2).build().perform();
+	we2.click();
+	Thread.sleep(4000);
+	we2.sendKeys("Password@1234567");
+	
+	a.moveToElement(we1).doubleClick().build().perform();  //double click
+	b.moveToElement(we2).doubleClick().build().perform();  //double click
+	
+	a.contextClick().moveToElement(we1).build().perform();  //right click
+	
+	//a.doubleClick().moveToElement(we1).build().perform();
+	Thread.sleep(5000);
+	//b.doubleClick().moveToElement(we2).build().perform();
+	
+	Thread.sleep(5000);
+	dr.close();
+	}
+
+}

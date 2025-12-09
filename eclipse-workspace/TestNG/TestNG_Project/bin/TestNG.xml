@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+ <test name="Test" Parallel= "Methods">
+    <classes>
+    
+    
+      <!-- <parameter name= "UserName" value= "Chetana"/>-->
+      <!--  <parameter name= "Password" value= "123"/>-->
+      
+    <!--   <class name="nov_20.CrossBrowser"/>-->
+      
+     <!--  <parameter name= "Browser" value= "EDGE"/>
+      
+      <parameter name= "Browser" value= "CHROME"/>
+      <parameter name= "Browser" value="FireFOX"/>-->
+
+      
+   <!--   <class name="nov_21.ParallelExecution"/>-->
+
+   <!--   <class name="nov_21.ParallelExecution1"/>
+	 <class name="nov_21.ParallelExecution"/>
+      
+     <class name="nov_21.FailTestCase"/>-->
+
+      
+      	 <class name="nov_21.TestNGGroup"/>
+      	 <class name="nov_21.ParallelExecution1"/>
+
+
+      
+         
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,32 @@
+package Pages;   //store only object 
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class PracticeTest {
+
+	WebDriver dr;
+	By Username = By.id("username");   //Objects created for each field e.g. Username, Password, Submit
+	By Password = By.id("password");
+	By Submit = By.id("submit");
+
+	public void EnterUsername(String input) {
+		dr.findElement(Username).sendKeys(input);
+	}
+	
+	public void EnterPassword(String input) {
+		dr.findElement(Password).sendKeys(input);
+	}
+	
+	public void ClickSubmit() {
+		dr.findElement(Submit).click();
+	}
+	
+	public void close() {
+		dr.close();
+	}
+	
+	public PracticeTest(WebDriver dr) {
+		this.dr = dr;   //this will refer current class object
+	}
+}

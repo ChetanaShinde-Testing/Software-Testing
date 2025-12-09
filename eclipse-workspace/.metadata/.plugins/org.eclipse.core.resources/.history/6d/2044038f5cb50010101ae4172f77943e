@@ -1,0 +1,36 @@
+package test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Register {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver dr= new ChromeDriver();
+		dr.get ("https://demo.automationtesting.in/Register.html");
+		dr.manage().window().maximize();
+		dr.findElement(By.xpath("//input[@ng-model='FirstName']")).sendKeys("Chetana");
+		dr.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Shinde");
+		dr.findElement(By.xpath("//textarea[@ng-model='Adress']")).sendKeys("Star shadow, pune");
+		dr.findElement(By.xpath("//input[@type='email']")).sendKeys("chetanashinde0292@gmail.com");
+		dr.findElement(By.xpath("//input[@ng-model='Phone']")).sendKeys("7776822414");
+		dr.findElement(By.xpath("//input[@value='FeMale']")).click();
+		dr.findElement(By.xpath("//input[@value='Hockey']")).click();
+		dr.findElement(By.xpath("//input[@value='Cricket']")).click();
+		dr.findElement(By.xpath("//input[@value='Movies']")).click();
+		Select s1= new Select(dr.findElement(By.id("Skills")));
+		s1.selectByIndex(2);
+		s1.selectByVisibleText("CSS");
+		s1.selectByValue("C");
+		Select s2= new Select(dr.findElement(By.id("yearbox")));
+		s2.selectByIndex(15);
+		Select s3= new Select(dr.findElement(By.xpath("//Select[@placeholder='Year']")));
+		s3.selectByVisibleText("May");
+		
+		dr.findElement(By.id("firstpassword")).sendKeys("Chetana@123");
+	}
+
+}

@@ -1,0 +1,6 @@
+Feature: Login page 
+Scenario: Check login with valid credentionals 
+Given User is on login page
+When User enter valid username and password
+And click on OK button
+Then Login sucessful and user redirect to home page
