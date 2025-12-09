@@ -13,7 +13,7 @@ public class Practice {
   @Test
   public void facebookLogin() throws InterruptedException {
 	  Thread.sleep(1000);
-	  dr.findElement(By.id("email")).sendKeys("9764221501");
+	  dr.findElement(By.id("email")).sendKeys("97xxxxxxxx");
 	  Thread.sleep(1000);
 	  dr.findElement(By.id("pass")).sendKeys("Shital@239");
 	  Thread.sleep(2000);
